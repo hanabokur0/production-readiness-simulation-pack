@@ -1,0 +1,15 @@
+id: FAIL-002
+domain: failure
+title: External API timeout degrades safely
+purpose: External API timeout degrades safely
+severity: high
+checks:
+- path: failure.external_api_timeout_handled
+  operator: equals
+  on_fail: HOLD
+  value: true
+evidence_required:
+- external API timeout test
+tags:
+- failure
+- production-readiness
