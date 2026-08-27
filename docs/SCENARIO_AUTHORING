@@ -1,0 +1,37 @@
+# Scenario authoring guide
+
+A scenario is a reusable unit of production experience.
+
+```text
+incident / expert warning
+        ↓
+condition
+        ↓
+scenario
+        ↓
+executable or declared check
+        ↓
+evidence
+        ↓
+gate
+```
+
+## Good
+
+```yaml
+id: BILL-001
+title: Duplicate webhook processing is idempotent
+checks:
+  - path: billing.duplicate_webhook_tested
+    operator: equals
+    value: true
+    on_fail: HOLD
+```
+
+## Weak
+
+```yaml
+check: billing looks okay
+```
+
+Scenarios should be narrow enough that a failed result points to a concrete next action.
