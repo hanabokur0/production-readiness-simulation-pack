@@ -1,0 +1,15 @@
+id: SLA-001
+domain: sla
+title: Availability or service target is explicitly defined
+purpose: Availability or service target is explicitly defined
+severity: medium
+checks:
+- path: sla.target_defined
+  operator: equals
+  on_fail: REVIEW
+  value: true
+evidence_required:
+- SLO/SLA target document
+tags:
+- sla
+- production-readiness
