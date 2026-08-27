@@ -1,0 +1,15 @@
+id: MIG-001
+domain: migration
+title: Migration rollback has been executed successfully
+purpose: Migration rollback has been executed successfully
+severity: critical
+checks:
+- path: migration.rollback_tested
+  operator: equals
+  on_fail: HOLD
+  value: true
+evidence_required:
+- rollback dry-run receipt
+tags:
+- migration
+- production-readiness
