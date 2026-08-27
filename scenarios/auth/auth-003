@@ -1,0 +1,19 @@
+id: AUTH-003
+domain: auth
+title: Refresh failure has a safe recovery path
+purpose: Refresh failure has a safe recovery path
+severity: medium
+checks:
+- path: auth.refresh_failure_tested
+  operator: equals
+  on_fail: HOLD
+  value: true
+evidence_required:
+- refresh-token failure test receipt
+tags:
+- auth
+- production-readiness
+applies_when:
+  path: auth.enabled
+  operator: equals
+  value: true
