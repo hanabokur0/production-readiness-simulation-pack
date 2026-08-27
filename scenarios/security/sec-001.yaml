@@ -1,0 +1,15 @@
+id: SEC-001
+domain: security
+title: Repository and build artifacts are scanned for secrets
+purpose: Repository and build artifacts are scanned for secrets
+severity: critical
+checks:
+- path: security.secrets_scanned
+  operator: equals
+  on_fail: REJECT
+  value: true
+evidence_required:
+- secret scan result
+tags:
+- security
+- production-readiness
