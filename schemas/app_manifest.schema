@@ -1,0 +1,26 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://example.org/prsp/app_manifest.schema.yaml
+title: PRSP App Manifest
+type: object
+required: [app]
+properties:
+  app:
+    type: object
+    required: [id, stage]
+    properties:
+      id: {type: string, minLength: 1}
+      name: {type: string}
+      version: {type: string}
+      stage: {enum: [idea, poc, prototype, staging, production_candidate, production]}
+  auth: {type: object}
+  authorization: {type: object}
+  failure: {type: object}
+  observability: {type: object}
+  security: {type: object}
+  billing: {type: object}
+  support: {type: object}
+  migration: {type: object}
+  sla: {type: object}
+  load: {type: object}
+  legal: {type: object}
+additionalProperties: true
