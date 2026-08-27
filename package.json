@@ -1,0 +1,18 @@
+{
+  "name": "production-readiness-simulation-pack",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Scenario-driven gate between PoC and production candidate.",
+  "type": "module",
+  "scripts": {
+    "simulate": "node src/cli.js examples/app_manifest.yaml",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
