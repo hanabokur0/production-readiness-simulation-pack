@@ -1,0 +1,19 @@
+id: AUTH-001
+domain: auth
+title: Expired access token is rejected
+purpose: Verify expired credentials cannot continue accessing protected resources.
+severity: high
+checks:
+- path: auth.token_expiry_tested
+  operator: equals
+  on_fail: HOLD
+  value: true
+evidence_required:
+- expired-token test receipt
+tags:
+- auth
+- production-readiness
+applies_when:
+  path: auth.enabled
+  operator: equals
+  value: true
