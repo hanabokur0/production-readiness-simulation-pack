@@ -1,0 +1,28 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://example.org/prsp/simulation_receipt.schema.yaml
+title: PRSP Simulation Receipt
+type: object
+required: [receipt_version, run_id, app_id, overall_gate, results]
+properties:
+  receipt_version: {type: string}
+  run_id: {type: string}
+  generated_at: {type: string}
+  app_id: {type: string}
+  overall_gate: {enum: [PASS, REVIEW, HOLD, REJECT]}
+  summary:
+    type: object
+    additionalProperties: {type: integer}
+  results:
+    type: array
+    items:
+      type: object
+      required: [scenario_id, domain, status]
+      properties:
+        scenario_id: {type: string}
+        domain: {type: string}
+        status: {enum: [PASS, REVIEW, HOLD, REJECT, SKIP]}
+        reason: {type: string}
+        evidence_required:
+          type: array
+          items: {type: string}
+additionalProperties: true
