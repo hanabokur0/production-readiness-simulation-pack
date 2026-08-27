@@ -1,0 +1,15 @@
+id: SLA-002
+domain: sla
+title: Error budget or equivalent breach policy is defined
+purpose: Error budget or equivalent breach policy is defined
+severity: medium
+checks:
+- path: sla.error_budget_defined
+  operator: equals
+  on_fail: REVIEW
+  value: true
+evidence_required:
+- error-budget/breach policy
+tags:
+- sla
+- production-readiness
