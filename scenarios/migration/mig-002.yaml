@@ -1,0 +1,15 @@
+id: MIG-002
+domain: migration
+title: Duplicate records are handled deterministically
+purpose: Duplicate records are handled deterministically
+severity: high
+checks:
+- path: migration.duplicate_handling_tested
+  operator: equals
+  on_fail: HOLD
+  value: true
+evidence_required:
+- duplicate-data migration fixture
+tags:
+- migration
+- production-readiness
