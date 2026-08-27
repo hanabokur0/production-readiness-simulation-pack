@@ -1,0 +1,133 @@
+receipt_version: '0.1'
+run_id: sim-example-001
+generated_at: '2026-08-27T00:00:00Z'
+app_id: demo-saas
+app_stage: poc
+overall_gate: HOLD
+summary:
+  PASS: 18
+  REVIEW: 3
+  HOLD: 9
+  REJECT: 0
+  SKIP: 0
+results:
+- scenario_id: AUTH-001
+  domain: auth
+  status: PASS
+  reason: All declared checks pass.
+- scenario_id: AUTH-002
+  domain: auth
+  status: HOLD
+  reason: auth.logout_invalidation_tested is not verified
+- scenario_id: AUTH-003
+  domain: auth
+  status: PASS
+  reason: All declared checks pass.
+- scenario_id: AUTHZ-001
+  domain: authorization
+  status: PASS
+  reason: All declared checks pass.
+- scenario_id: AUTHZ-002
+  domain: authorization
+  status: PASS
+  reason: All declared checks pass.
+- scenario_id: AUTHZ-003
+  domain: authorization
+  status: PASS
+  reason: All declared checks pass.
+- scenario_id: FAIL-001
+  domain: failure
+  status: PASS
+  reason: All declared checks pass.
+- scenario_id: FAIL-002
+  domain: failure
+  status: HOLD
+  reason: failure.external_api_timeout_handled is not verified
+- scenario_id: FAIL-003
+  domain: failure
+  status: PASS
+  reason: All declared checks pass.
+- scenario_id: OBS-001
+  domain: observability
+  status: PASS
+  reason: All declared checks pass.
+- scenario_id: OBS-002
+  domain: observability
+  status: HOLD
+  reason: observability.latency_alert_tested is not verified
+- scenario_id: OBS-003
+  domain: observability
+  status: HOLD
+  reason: observability.alert_delivery_verified is not verified
+- scenario_id: SEC-001
+  domain: security
+  status: PASS
+  reason: All declared checks pass.
+- scenario_id: SEC-002
+  domain: security
+  status: PASS
+  reason: All declared checks pass.
+- scenario_id: SEC-003
+  domain: security
+  status: PASS
+  reason: All declared checks pass.
+- scenario_id: BILL-001
+  domain: billing
+  status: HOLD
+  reason: billing.duplicate_webhook_tested is not verified
+- scenario_id: BILL-002
+  domain: billing
+  status: PASS
+  reason: All declared checks pass.
+- scenario_id: BILL-003
+  domain: billing
+  status: HOLD
+  reason: billing.cancellation_race_tested is not verified
+- scenario_id: SUP-001
+  domain: support
+  status: PASS
+  reason: All declared checks pass.
+- scenario_id: SUP-002
+  domain: support
+  status: HOLD
+  reason: support.deletion_request_runbook is not verified
+- scenario_id: MIG-001
+  domain: migration
+  status: HOLD
+  reason: migration.rollback_tested is not verified
+- scenario_id: MIG-002
+  domain: migration
+  status: PASS
+  reason: All declared checks pass.
+- scenario_id: MIG-003
+  domain: migration
+  status: HOLD
+  reason: migration.partial_failure_recovery_tested is not verified
+- scenario_id: SLA-001
+  domain: sla
+  status: PASS
+  reason: All declared checks pass.
+- scenario_id: SLA-002
+  domain: sla
+  status: REVIEW
+  reason: sla.error_budget_defined is not verified
+- scenario_id: LOAD-001
+  domain: load
+  status: PASS
+  reason: All declared checks pass.
+- scenario_id: LOAD-002
+  domain: load
+  status: PASS
+  reason: All declared checks pass.
+- scenario_id: LOAD-003
+  domain: load
+  status: REVIEW
+  reason: load.capacity_limit_known is not verified
+- scenario_id: LEGAL-001
+  domain: legal
+  status: PASS
+  reason: All declared checks pass.
+- scenario_id: LEGAL-002
+  domain: legal
+  status: REVIEW
+  reason: legal.consent_recorded is not verified
