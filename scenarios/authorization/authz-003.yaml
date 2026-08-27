@@ -1,0 +1,15 @@
+id: AUTHZ-003
+domain: authorization
+title: Roles and ownership rules are explicitly defined
+purpose: Roles and ownership rules are explicitly defined
+severity: high
+checks:
+- path: authorization.roles_defined
+  operator: equals
+  on_fail: HOLD
+  value: true
+evidence_required:
+- role/permission matrix
+tags:
+- authorization
+- production-readiness
