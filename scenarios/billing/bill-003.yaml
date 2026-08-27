@@ -1,0 +1,19 @@
+id: BILL-003
+domain: billing
+title: Cancellation and renewal race is tested
+purpose: Cancellation and renewal race is tested
+severity: critical
+checks:
+- path: billing.cancellation_race_tested
+  operator: equals
+  on_fail: HOLD
+  value: true
+evidence_required:
+- cancel/renew race test receipt
+tags:
+- billing
+- production-readiness
+applies_when:
+  path: billing.enabled
+  operator: equals
+  value: true
