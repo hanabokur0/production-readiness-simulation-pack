@@ -1,0 +1,15 @@
+id: OBS-001
+domain: observability
+title: Application error alert is verified end-to-end
+purpose: Application error alert is verified end-to-end
+severity: critical
+checks:
+- path: observability.error_alert_tested
+  operator: equals
+  on_fail: HOLD
+  value: true
+evidence_required:
+- triggered error alert receipt
+tags:
+- observability
+- production-readiness
