@@ -1,0 +1,15 @@
+id: SEC-002
+domain: security
+title: Untrusted input validation has been tested
+purpose: Untrusted input validation has been tested
+severity: critical
+checks:
+- path: security.input_validation_tested
+  operator: equals
+  on_fail: REJECT
+  value: true
+evidence_required:
+- input validation/security test
+tags:
+- security
+- production-readiness
