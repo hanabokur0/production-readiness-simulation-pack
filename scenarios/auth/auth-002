@@ -1,0 +1,19 @@
+id: AUTH-002
+domain: auth
+title: Logout invalidates active session
+purpose: Logout invalidates active session
+severity: high
+checks:
+- path: auth.logout_invalidation_tested
+  operator: equals
+  on_fail: HOLD
+  value: true
+evidence_required:
+- logout invalidation test receipt
+tags:
+- auth
+- production-readiness
+applies_when:
+  path: auth.enabled
+  operator: equals
+  value: true
