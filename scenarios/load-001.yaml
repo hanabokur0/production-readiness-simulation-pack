@@ -1,0 +1,15 @@
+id: LOAD-001
+domain: load
+title: Measured load test exceeds declared baseline
+purpose: Measured load test exceeds declared baseline
+severity: high
+checks:
+- path: load.load_test_rps
+  operator: gte
+  on_fail: HOLD
+  value: 100
+evidence_required:
+- load test result >= minimum profile
+tags:
+- load
+- production-readiness
