@@ -1,0 +1,15 @@
+id: FAIL-001
+domain: failure
+title: Database timeout degrades safely
+purpose: Database timeout degrades safely
+severity: high
+checks:
+- path: failure.db_timeout_handled
+  operator: equals
+  on_fail: HOLD
+  value: true
+evidence_required:
+- database timeout test
+tags:
+- failure
+- production-readiness
