@@ -1,0 +1,15 @@
+id: LEGAL-001
+domain: legal
+title: Privacy policy presence is verified
+purpose: Privacy policy presence is verified
+severity: high
+checks:
+- path: legal.privacy_policy_present
+  operator: equals
+  on_fail: REVIEW
+  value: true
+evidence_required:
+- privacy policy reference
+tags:
+- legal
+- production-readiness
