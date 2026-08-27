@@ -1,0 +1,15 @@
+id: OBS-002
+domain: observability
+title: Latency alert is verified end-to-end
+purpose: Latency alert is verified end-to-end
+severity: high
+checks:
+- path: observability.latency_alert_tested
+  operator: equals
+  on_fail: HOLD
+  value: true
+evidence_required:
+- latency alert receipt
+tags:
+- observability
+- production-readiness
