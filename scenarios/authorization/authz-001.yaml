@@ -1,0 +1,15 @@
+id: AUTHZ-001
+domain: authorization
+title: Cross-user resource access is denied
+purpose: Cross-user resource access is denied
+severity: critical
+checks:
+- path: authorization.cross_user_access_tested
+  operator: equals
+  on_fail: REJECT
+  value: true
+evidence_required:
+- cross-user access control test
+tags:
+- authorization
+- production-readiness
