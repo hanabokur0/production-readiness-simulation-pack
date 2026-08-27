@@ -1,0 +1,15 @@
+id: SUP-001
+domain: support
+title: Customer support route is defined
+purpose: Customer support route is defined
+severity: medium
+checks:
+- path: support.route_defined
+  operator: equals
+  on_fail: HOLD
+  value: true
+evidence_required:
+- support escalation/runbook
+tags:
+- support
+- production-readiness
