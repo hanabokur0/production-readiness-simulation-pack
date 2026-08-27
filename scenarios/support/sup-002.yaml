@@ -1,0 +1,15 @@
+id: SUP-002
+domain: support
+title: Data deletion request has an executable runbook
+purpose: Data deletion request has an executable runbook
+severity: high
+checks:
+- path: support.deletion_request_runbook
+  operator: equals
+  on_fail: HOLD
+  value: true
+evidence_required:
+- deletion request dry-run receipt
+tags:
+- support
+- production-readiness
