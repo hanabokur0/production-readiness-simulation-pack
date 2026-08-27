@@ -1,0 +1,61 @@
+app:
+  id: demo-saas
+  name: Demo SaaS
+  version: 0.1.0
+  stage: poc
+
+auth:
+  enabled: true
+  provider: external
+  token_expiry_tested: true
+  logout_invalidation_tested: false
+  refresh_failure_tested: true
+
+authorization:
+  roles_defined: true
+  cross_user_access_tested: true
+  privilege_escalation_tested: true
+
+failure:
+  db_timeout_handled: true
+  external_api_timeout_handled: false
+  rate_limit_handled: true
+
+observability:
+  error_alert_tested: true
+  latency_alert_tested: false
+  alert_delivery_verified: false
+
+security:
+  secrets_scanned: true
+  input_validation_tested: true
+  dependency_scan_current: true
+
+billing:
+  enabled: true
+  duplicate_webhook_tested: false
+  payment_failure_tested: true
+  cancellation_race_tested: false
+
+support:
+  route_defined: true
+  deletion_request_runbook: false
+
+migration:
+  rollback_tested: false
+  duplicate_handling_tested: true
+  partial_failure_recovery_tested: false
+
+sla:
+  target_defined: true
+  error_budget_defined: false
+
+load:
+  baseline_rps: 50
+  load_test_rps: 120
+  burst_tested: true
+  capacity_limit_known: false
+
+legal:
+  privacy_policy_present: true
+  consent_recorded: false
