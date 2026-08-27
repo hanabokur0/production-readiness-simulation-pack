@@ -1,0 +1,15 @@
+id: MIG-003
+domain: migration
+title: Partial migration failure can resume or recover
+purpose: Partial migration failure can resume or recover
+severity: critical
+checks:
+- path: migration.partial_failure_recovery_tested
+  operator: equals
+  on_fail: HOLD
+  value: true
+evidence_required:
+- partial-failure recovery receipt
+tags:
+- migration
+- production-readiness
