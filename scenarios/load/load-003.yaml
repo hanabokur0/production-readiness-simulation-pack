@@ -1,0 +1,15 @@
+id: LOAD-003
+domain: load
+title: Capacity limit or saturation point is known
+purpose: Capacity limit or saturation point is known
+severity: medium
+checks:
+- path: load.capacity_limit_known
+  operator: equals
+  on_fail: REVIEW
+  value: true
+evidence_required:
+- capacity/saturation observation
+tags:
+- load
+- production-readiness
