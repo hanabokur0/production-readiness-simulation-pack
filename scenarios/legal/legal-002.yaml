@@ -1,0 +1,15 @@
+id: LEGAL-002
+domain: legal
+title: Consent recording behavior is verified
+purpose: Consent recording behavior is verified
+severity: high
+checks:
+- path: legal.consent_recorded
+  operator: equals
+  on_fail: REVIEW
+  value: true
+evidence_required:
+- consent record evidence
+tags:
+- legal
+- production-readiness
