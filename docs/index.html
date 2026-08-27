@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Production Readiness Simulation Pack</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <div class="eyebrow">PRSP / v0.1</div>
+      <h1>Production Readiness<br>Simulation Pack</h1>
+      <p>Turn vague “production experience” into explicit scenarios, evidence requirements, and promotion gates.</p>
+    </header>
+
+    <section class="flow">
+      <span>PoC</span><b>→</b><span>Manifest</span><b>→</b><span>30 Scenarios</span><b>→</b><span>Gate</span><b>→</b><span>Receipt</span>
+    </section>
+
+    <section class="panel">
+      <div>
+        <h2>Demo manifest</h2>
+        <p>Edit the JSON-compatible manifest and run a model-level readiness simulation.</p>
+        <textarea id="manifest"></textarea>
+        <button id="run">Run simulation</button>
+      </div>
+      <div>
+        <h2>Gate</h2>
+        <div id="gate" class="gate">—</div>
+        <div id="summary" class="summary"></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Findings</h2>
+      <div id="results" class="results"></div>
+    </section>
+
+    <footer>simulation != certification · unknown != failed · generator != grader != gate != executor</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
