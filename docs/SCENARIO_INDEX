@@ -1,0 +1,36 @@
+# Scenario Index
+
+v0.1 contains 30 production-readiness scenarios.
+
+| ID | Domain | Severity | Scenario |
+|---|---|---|---|
+| AUTH-001 | auth | high | Expired access token is rejected |
+| AUTH-002 | auth | high | Logout invalidates active session |
+| AUTH-003 | auth | medium | Refresh failure has a safe recovery path |
+| AUTHZ-001 | authorization | critical | Cross-user resource access is denied |
+| AUTHZ-002 | authorization | critical | Privilege escalation is denied |
+| AUTHZ-003 | authorization | high | Roles and ownership rules are explicitly defined |
+| BILL-001 | billing | critical | Duplicate webhook processing is idempotent |
+| BILL-002 | billing | high | Payment failure has a defined state transition |
+| BILL-003 | billing | critical | Cancellation and renewal race is tested |
+| FAIL-001 | failure | high | Database timeout degrades safely |
+| FAIL-002 | failure | high | External API timeout degrades safely |
+| FAIL-003 | failure | high | Rate limiting is handled without request storm |
+| LEGAL-001 | legal | high | Privacy policy presence is verified |
+| LEGAL-002 | legal | high | Consent recording behavior is verified |
+| LOAD-001 | load | high | Measured load test exceeds declared baseline |
+| LOAD-002 | load | high | Burst traffic behavior has been tested |
+| LOAD-003 | load | medium | Capacity limit or saturation point is known |
+| MIG-001 | migration | critical | Migration rollback has been executed successfully |
+| MIG-002 | migration | high | Duplicate records are handled deterministically |
+| MIG-003 | migration | critical | Partial migration failure can resume or recover |
+| OBS-001 | observability | critical | Application error alert is verified end-to-end |
+| OBS-002 | observability | high | Latency alert is verified end-to-end |
+| OBS-003 | observability | critical | Alert delivery route reaches a responsible owner |
+| SEC-001 | security | critical | Repository and build artifacts are scanned for secrets |
+| SEC-002 | security | critical | Untrusted input validation has been tested |
+| SEC-003 | security | high | Dependency vulnerability scan is current |
+| SLA-001 | sla | medium | Availability or service target is explicitly defined |
+| SLA-002 | sla | medium | Error budget or equivalent breach policy is defined |
+| SUP-001 | support | medium | Customer support route is defined |
+| SUP-002 | support | high | Data deletion request has an executable runbook |
