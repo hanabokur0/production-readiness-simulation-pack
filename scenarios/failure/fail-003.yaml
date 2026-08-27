@@ -1,0 +1,15 @@
+id: FAIL-003
+domain: failure
+title: Rate limiting is handled without request storm
+purpose: Rate limiting is handled without request storm
+severity: high
+checks:
+- path: failure.rate_limit_handled
+  operator: equals
+  on_fail: HOLD
+  value: true
+evidence_required:
+- 429/backoff test
+tags:
+- failure
+- production-readiness
