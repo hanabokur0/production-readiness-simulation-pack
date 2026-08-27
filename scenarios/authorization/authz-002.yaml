@@ -1,0 +1,15 @@
+id: AUTHZ-002
+domain: authorization
+title: Privilege escalation is denied
+purpose: Privilege escalation is denied
+severity: critical
+checks:
+- path: authorization.privilege_escalation_tested
+  operator: equals
+  on_fail: REJECT
+  value: true
+evidence_required:
+- role escalation test
+tags:
+- authorization
+- production-readiness
